@@ -1,0 +1,251 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f5f7fa;
+  color: #333;
+  line-height: 1.6;
+}
+.todo-container {
+  max-width: 550px;
+  margin: 40px auto;
+  padding: 30px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.todo-container:hover {
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.15);
+}
+
+.todo-title {
+  font-size: 2rem;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 25px;
+  color: #3a86ff;
+  letter-spacing: 0.5px;
+}
+
+.todo-input-container {
+  display: flex;
+  margin-bottom: 25px;
+}
+
+.todo-input {
+  flex-grow: 1;
+  padding: 12px 15px;
+  font-size: 1rem;
+  border: 2px solid #e1e5eb;
+  border-right: none;
+  border-radius: 8px 0 0 8px;
+  transition: all 0.3s;
+  outline: none;
+  font-family: 'Poppins', sans-serif;
+}
+
+.todo-input:focus {
+  border-color: #3a86ff;
+  box-shadow: 0 0 0 3px rgba(58, 134, 255, 0.2);
+}
+
+.todo-input::placeholder {
+  color: #a0a8b7;
+}
+
+.todo-add-btn {
+  background-color: #3a86ff;
+  color: white;
+  border: none;
+  padding: 0 20px;
+  font-size: 1rem;
+  font-weight: 500;
+  border-radius: 0 8px 8px 0;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-family: 'Poppins', sans-serif;
+}
+
+.todo-add-btn:hover {
+  background-color: #2f6fd9;
+}
+
+.todo-add-btn:active {
+  transform: scale(0.97);
+}
+.todo-list-container {
+  margin-bottom: 25px;
+}
+
+.todo-list-title {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: #4b5563;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #e1e5eb;
+}
+
+.todo-empty-message {
+  text-align: center;
+  padding: 20px;
+  color: #a0a8b7;
+  font-style: italic;
+  background-color: #f9fafb;
+  border-radius: 8px;
+}
+
+.todo-list {
+  list-style: none;
+}
+
+.todo-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px;
+  margin-bottom: 10px;
+  background-color: #f9fafb;
+  border-radius: 8px;
+  border-left: 4px solid #3a86ff;
+  transition: all 0.2s;
+}
+
+.todo-item:hover {
+  background-color: #f3f4f6;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.todo-text {
+  flex-grow: 1;
+  font-size: 1.05rem;
+  word-break: break-word;
+  transition: all 0.2s;
+}
+
+.todo-done {
+  text-decoration: line-through;
+  color: #9ca3af;
+  font-style: italic;
+}
+
+.todo-actions {
+  display: flex;
+  gap: 8px;
+}
+
+/* Buttons */
+.todo-button {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-family: 'Poppins', sans-serif;
+}
+
+.todo-button:active {
+  transform: scale(0.95);
+}
+
+.todo-done-btn {
+  background-color: #10b981;
+  color: white;
+}
+
+.todo-done-btn:hover {
+  background-color: #059669;
+}
+
+.todo-undo-btn {
+  background-color: #e9f7ef;
+  color: #10b981;
+  border: 1px solid #10b981;
+}
+
+.todo-undo-btn:hover {
+  background-color: #d1fae5;
+}
+
+.todo-delete-btn {
+  background-color: #ef4444;
+  color: white;
+}
+
+.todo-delete-btn:hover {
+  background-color: #dc2626;
+}
+
+.todo-mark-all-container {
+  text-align: center;
+  margin-top: 25px;
+}
+
+.todo-mark-all-btn {
+  background-color: #3a86ff;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-family: 'Poppins', sans-serif;
+}
+
+.todo-mark-all-btn:hover {
+  background-color: #2f6fd9;
+}
+
+.todo-mark-all-btn:active {
+  transform: scale(0.97);
+}
+
+@media (max-width: 600px) {
+  .todo-container {
+    margin: 20px 15px;
+    padding: 20px;
+  }
+  
+  .todo-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .todo-text {
+    margin-bottom: 10px;
+    width: 100%;
+  }
+  
+  .todo-actions {
+    width: 100%;
+    justify-content: space-between;
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.todo-item {
+  animation: fadeIn 0.3s ease-in-out;
+}
